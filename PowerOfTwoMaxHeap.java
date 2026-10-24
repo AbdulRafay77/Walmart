@@ -65,7 +65,7 @@ public final class PowerOfTwoMaxHeap {
 
         int index = 0;
         // The final possible parent is floor((size - 2) / branchingFactor).
-        while (index <= (size - 2) / branchingFactor) {
+        while (size > 1 && index <= (size - 2) / branchingFactor) {
             int firstChild = index * branchingFactor + 1;
             int childLimit = (int) Math.min((long) size,
                     (long) firstChild + branchingFactor);
